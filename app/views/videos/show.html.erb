@@ -1,7 +1,16 @@
 <h1><%= @video.title %></h1>
+<h3><%= @video.subtitle %></h3>
 
 <iframe width="420" height="315" src="//www.youtube.com/embed/<%= @video.youtube_id %>" frameborder="0" allowfullscreen></iframe>
 
-<p><%= @video.description %></p>
+<div>
+	<button><%= link_to 'Previous', video_path(@video.previous) %></button>
+	<button><%= link_to 'home', root_path %></button>
+	<button><%= link_to 'Next', video_path(@video.next) %></button>
+</div>
+<div>
+	<h4>By:<%= @video.uploader %></h4>
+	<h5>Rating: <%= @video.rating %></h5>
+</div>
+	<p><%= @video.description %></p>
 
-<p><%= link_to 'home', root_path %></p>

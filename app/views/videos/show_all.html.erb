@@ -1,5 +1,6 @@
 <ul> All the videos!
   <% @videos.each do |video| %>
-    <li><%= link_to video.title, video_path(video.id) %></li>
+    <li><%= link_to video.title, video_path(video.id) %></li><label><%= video.rating %></label>
+    <li><%= video.snippet%></li>
   <% end %>
 </ul>
