@@ -3,9 +3,12 @@
 <%= form_for @video do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
+
 	<%= f.label :youtube_id %>
 	<%= f.text_field :youtube_id %>
+
 	<%= f.label :description %>
 	<%= f.text_field :description %>
+	
   <%= f.submit %>
 <% end %>
